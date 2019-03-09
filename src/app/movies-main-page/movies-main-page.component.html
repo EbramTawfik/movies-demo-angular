@@ -1,3 +1,10 @@
-<p>
-  movies-main-page works!
-</p>
+<div class='movies-div'>
+  <mat-card class="movie-card " *ngFor="let movie of movies" matRipple>
+    <mat-card-header>
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.Year }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="movie.Poster" alt="No Poster Availble" />
+  </mat-card>
+</div>
