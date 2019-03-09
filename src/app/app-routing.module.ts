@@ -4,11 +4,7 @@ import { MoviesMainPageComponent } from './movies-main-page/movies-main-page.com
 import { MoviesDetailsPageComponent } from './movies-details-page/movies-details-page.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/movies',
-    pathMatch: 'full'
-  },
+
   {
     path: 'movies',
     component: MoviesMainPageComponent
@@ -17,7 +13,12 @@ const routes: Routes = [
   {
     path: 'movieDetails/:id',
     component: MoviesDetailsPageComponent
-  }
+  },
+  {
+    path: '',
+    redirectTo: '/movies',
+    pathMatch: 'prefix'
+  },
 ];
 
 @NgModule({
