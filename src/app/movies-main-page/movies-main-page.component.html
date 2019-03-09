@@ -1,5 +1,5 @@
 <div class='movies-div'>
-  <mat-card class="movie-card " *ngFor="let movie of movies" matRipple>
+  <mat-card class="movie-card " *ngFor="let movie of movies" (click)="selectMovie(movie)" matRipple>
     <mat-card-header>
       <mat-card-title>{{ movie.Title }}</mat-card-title>
       <mat-card-subtitle>{{ movie.Year }}</mat-card-subtitle>

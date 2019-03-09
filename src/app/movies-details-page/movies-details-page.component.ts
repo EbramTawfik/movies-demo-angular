@@ -7,10 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movies-details-page.component.scss']
 })
 export class MoviesDetailsPageComponent implements OnInit {
+  movieId: string;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.movieId = params['id'];
       console.log(params); //log the entire params object
       console.log(params['id']); //log the value of id
     });
